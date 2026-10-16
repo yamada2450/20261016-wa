@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+*{
+    box-sizing: border-box;
+}
+
+
+#app {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+section {
+  margin-bottom: 40px;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.product-card {
+  box-sizing: border-box;
+  width: 280px;
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.product-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: contain;
+}
+
+.product-card h3 {
+  margin-top: 12px;
+}
+
+.product-card p {
+  margin-bottom: 8px;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>オンラインショップ（複数のデータ）</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+  <h1>オンラインショップ</h1>
+
+  <section>
+    <h2>おすすめ商品</h2>
+    <div class="product-list">
+      <div class="product-card" v-for="item in recommendedProducts" :key="item.id">
+        <img :src="item.image" :alt="item.name">
+        <h3>{{ item.name }}</h3>
+        <p>{{ item.price.toLocaleString() }}円</p>
+        <p>{{ item.description }}</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>商品一覧</h2>
+    <div class="product-list">
+      <div class="product-card" v-for="item in products" :key="item.id">
+        <img :src="item.image" :alt="item.name">
+        <h3>{{ item.name }}</h3>
+        <p>{{ item.price.toLocaleString() }}円</p>
+        <p>{{ item.category }}</p>
+      </div>
+    </div>
+  </section>
+</div>
+  
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

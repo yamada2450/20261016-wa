@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>key属性</title>
+</head>
+<body>
+  <div id="app">
+    <button @click="array.shift()">delete</button>
+    <div v-for="order in array":key="order">
+        {{ order }}
+        <input type="text">
+    </div>
+  </div>
+  
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+@charset "utf-8";
+* {
+    box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f4f6f9;
+  color: #333;
+}
+
+#app {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+
+h1 {
+  margin-bottom: 24px;
+}
+
+.student-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.student-card {
+  flex: 1 1 200px;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.student-card h2 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+.student-card p {
+  margin-bottom: 16px;
+}
+
+.pass,
+.fail {
+  display: inline-block;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.pass {
+  background: #d9f5e3;
+  color: #18753b;
+}
+
+.fail {
+  background: #ffe0e0;
+  color: #b42323;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title></title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <h1>key属性の動作確認</h1>
+    <p> 左右それぞれの入力欄に、上から「1」「2」「3」と入力してください。<br>
+    その後、「先頭を削除」ボタンを押して動作を比較しましょう。</p>
+
+    <button @click="array.shift()">先頭を削除</button>
+
+    <div class="comparison">
+        <section>
+            <h2>key属性ナシ</h2>
+            <div class="item" v-for="order in array">
+                <span>{{order}}</span>
+                <input type="text">
+            </div>
+        </section>
+
+        <section>
+            <h2>key属性あり</h2>
+            <div class="item" v-for="order in array":key="order">
+                <span>{{order}}</span>
+                <input type="text">
+            </div>
+        </section>
+
+    </div>
+    <p class="result">
+        <strong>確認ポイント</strong>
+        先頭を削除した時、番号と入力欄の内容がどのように変化するか比較しましょう。
+    </p>
+  </div>
+  
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

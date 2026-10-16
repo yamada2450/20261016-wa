@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>成績一覧（v-for + v-if）</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <div id="app">
+  <h1>成績一覧</h1>
+
+  <div class="student-list">
+    <div class="student-card" v-for="student in students" :key="student.id">
+      <h2>{{ student.name }}</h2>
+      <p>得点：{{ student.score }}点</p>
+      <span v-if="student.score >= 60" class="pass">
+        合格
+      </span>
+      <span v-else class="fail">
+        再試験
+      </span>
+    </div>
+  </div>
+</div>
+  
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

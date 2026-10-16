@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>階層構造のあるデータ1</title>
+</head>
+<body>
+  <div id="app">
+    <div v-for="prefecture in prefectures">
+  <h2>{{ prefecture.name }}</h2>
+  <ul>
+    <li v-for="city in prefecture.cities">
+      {{ city }}
+    </li>
+  </ul>
+  </div>
+  
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

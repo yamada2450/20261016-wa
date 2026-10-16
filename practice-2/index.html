@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>映画ライブラリ（階層構造のあるデータ）</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <div id="app">
+  <h1>映画ライブラリ</h1>
+  <p>お気に入りの映画を探してみましょう。</p>
+
+  <section v-for="genre in genres" :key="genre.id">
+    <h2>{{ genre.name }}</h2>
+
+    <div class="movie-list">
+      <div class="movie-card" v-for="movie in genre.movies" :key="movie.id">
+        <img :src="movie.image" :alt="movie.title">
+        <div class="movie-info">
+          <h3>{{ movie.title }}</h3>
+          <p>{{ movie.year }}年</p>
+          <p>{{ movie.description }}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+  
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

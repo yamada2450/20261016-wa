@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>v-for + v-if</title>
+</head>
+
+<body>
+    <div id="app">
+        <h1>在庫数が０より多い商品だけを表示</h1>
+        <ul>
+            <template v-for="product in products" :key="product.id">
+                <li v-if="product.stock > 0">
+                    {{ product.name }} ({{ product.stock}}個)
+                </li>
+            </template>
+
+        </ul>
+    </div>
+
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

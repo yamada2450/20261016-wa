@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>月別スケジュール（v-for + v-if）</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <h1>月間スケジュール</h1>
+
+    <div class="month-list">
+      <template v-for="month in months":key="month">
+        <div class="month-card" v-if="month >= currentMonth">
+          <h2>{{month}}月</h2>
+          <p>{{month}}月の予定</p>
+        </div>
+      </template>
+    </div>
+  </div>
+  
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
